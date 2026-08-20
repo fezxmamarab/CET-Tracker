@@ -12,10 +12,11 @@
 - `skills/` — 10 personal Claude skills (each `SKILL.md`; carousel/poster also ship a
   `scripts/export_*.py`).
 
-## Not in the repo (external, referenced by the docs)
-- `SEIT_CET_Dashboard.html` — the single-file dashboard (UI + vanilla JS + embedded ExcelJS).
-  Provided as an upload this session, not committed. Its parser is the authority for the
-  workbook schema in `.claude/DATABASE.md`. Key functions: `handleFile`,
+## `reference/` (reference only — NOT the source of truth)
+- `SEIT_CET_Dashboard.html` — the single-file SEIT dashboard (UI + vanilla JS + embedded
+  ExcelJS). Committed as a reference for building the SOE / ITE College West dashboard. Its
+  parser is the authority for the workbook schema in `.claude/DATABASE.md`. Key functions:
+  `handleFile`,
   `createDashboardData`, `parseActivities`, `parseOverallTable`, `parseOfferings`,
   `parsePipeline`, `aggregate`, `buildQuality`, `applySctpEnrollmentRule`; constants
   `CONFIG`, `CLUSTERS`, `FY_QUARTERS`, `CET_REPORTABLE_PROGRAMMES`.

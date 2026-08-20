@@ -26,9 +26,11 @@ data workbook template; the dashboard itself is a single self-contained HTML fil
 Load the state files (PROJECT, TODO, ROADMAP, DECISIONS) at onboarding.
 Load the heavy references (ARCHITECTURE, DATABASE, FILE_MAP) only when a task touches them.
 
-## Flags (please confirm/correct)
-- "SEIT" and "SOE" are taken to be the owning school (Singapore ITE context: WSDip, Higher
-  Nitec, SCTP, CoC, MLC, ApLM are ITE/SkillsFuture programme types). Correct if wrong.
-- The dashboard HTML (`SEIT_CET_Dashboard.html`) is the core of the project but is **not
-  committed** to this repo — it was provided as an upload. The knowledge base documents it
-  from that file. Consider committing it so the docs stay verifiable against code.
+## Direction (confirmed by the owner)
+- **SOE = School of Engineering.** Target institution: **ITE College West.**
+- Goal: build a NEW CET progress dashboard for SOE / ITE College West. The committed SEIT
+  dashboard is **reference only** (see `reference/SEIT_CET_Dashboard.html`), not the source of
+  truth and not the thing being shipped.
+- The owner is still gathering requirements — what the **inputs** (data to track) and the
+  **outputs** (how to present it) should be. Do NOT start building the SOE dashboard until
+  those are provided. See `.claude/MEMORY.md` for the live handoff.
