@@ -6,6 +6,9 @@
 _Last updated: 2026-08-20_
 
 ## Where things stand
+- **PR #1 is open** (branch `claude/cet-tracker-skills-install-shhsax` → `main`) with all of
+  this session's work: https://github.com/fezxmamarab/CET-Tracker/pull/1 — awaiting the
+  owner's review + Merge. Nothing is on `main` yet.
 - Repo currently holds: the **reference** SEIT dashboard, a **blank workbook template**, the
   `.claude/` knowledge base, and 10 personal skills. Nothing here is the final SOE product yet.
 - The committed `reference/SEIT_CET_Dashboard.html` is **reference material only** — the owner

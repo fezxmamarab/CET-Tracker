@@ -2,6 +2,8 @@
 
 Most actionable first.
 
+- [ ] **Merge PR #1** (branch `claude/cet-tracker-skills-install-shhsax` → `main`) when ready:
+      https://github.com/fezxmamarab/CET-Tracker/pull/1 — the owner reviews and clicks Merge.
 - [ ] **WAITING ON OWNER:** the input (data to track) and output (how to present) spec for the
       new SOE / ITE College West dashboard. Do not start building until provided.
 - [ ] When the spec lands, decide: adapt the SEIT reference dashboard, or build fresh.
