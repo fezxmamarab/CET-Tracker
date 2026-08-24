@@ -3,21 +3,25 @@
 > Scratch handoff between sessions. `onboard` reads it; `knowledge-builder` folds anything
 > durable into the state layer and then this can be trimmed. Keep it short and current.
 
-_Last updated: 2026-08-20_
+_Last updated: 2026-08-24_
 
 ## Where things stand
-- Repo currently holds: the **reference** SEIT dashboard, a **blank workbook template**, the
-  `.claude/` knowledge base, and 10 personal skills. Nothing here is the final SOE product yet.
-- The committed `reference/SEIT_CET_Dashboard.html` is **reference material only** — the owner
-  will use it as a model when building a dashboard for **SOE (School of Engineering), ITE
-  College West**. It is NOT the source of truth and NOT what we ship.
+- **SOE workbook first draft built and shipped for owner review:** `SOE CET Tracking 2026.xlsx`
+  (repo root, committed on branch `claude/onboarding-9z5cx5`). Department-based model.
+- Owner provided the **inputs**: 6 departments — LTE1 (AE Higher Nitec), LTE2 (AE TED & RTE),
+  EE (Electrical Engr), MCE (Mechatronic Engr), ME (Mechanical Engr), BE (Built Environment);
+  and 15 course types — WSDip, Higher Nitec, Higher Nitec (Enhanced), Nitec, ISC, ISC (WTC),
+  SCTP, CoC (ITE), CoC (WTC), Short Courses, MLC, JIND, WSQ, TTT, GE.
+- Workbook tabs: Read Me · Overall (merged participation+hours monitor) · one tab per dept ·
+  All Courses (register + counts) · Lists (dropdown source). See DECISIONS.md for rationale.
+- The committed `reference/SEIT_CET_Dashboard.html` is **reference only**; its parser assumes
+  the OLD programme/cluster schema and must be rewritten for the department model.
 
-## What we're waiting on (do not build yet)
-- The owner is gathering requirements from others on **how to present the data**. Two things
-  are needed before building the SOE dashboard:
-  1. **Inputs** — what data will be tracked / what the source workbook (or other source) looks like.
-  2. **Outputs** — how the dashboard should present it (KPIs, tabs, charts, audience).
-- The owner will update us when that information is ready. Until then, hold on building.
+## What we're waiting on
+- **Owner review of the workbook draft.** Two open questions: (a) keep both "Hours" and
+  "Total Hours" columns on dept tabs, or one? (b) keep "Runs" on All Courses, or plain list?
+- **Output spec for the SOE dashboard** (KPIs, charts, audience) — still needed before the
+  dashboard (HTML) is built. Workbook sign-off comes first.
 
 ## Useful context already captured (see the state layer)
 - How the reference dashboard works, its strict reconciliation gate, and the full workbook

@@ -1,15 +1,18 @@
 # ROADMAP — CET-Tracker
 
 ## Now
-- Workbook template shipped and validated. Skills installed.
+- SOE build has started. First draft of the SOE workbook (`SOE CET Tracking 2026.xlsx`,
+  department-based model) shipped for owner review. Awaiting sign-off on two design questions.
 
 ## Next (suggested)
-1. **Commit the dashboard HTML** so the docs are verifiable against real code and the app is
-   version-controlled alongside its template.
-2. **Commit the template generator script** for reproducible template builds (and to make
-   schema changes reviewable as code rather than a binary blob).
-3. Decide whether populated real-data workbooks live in the repo or stay off-repo (they are
-   operational data, not code — likely off-repo / gitignored).
+1. **Finalise the SOE workbook** after owner review, then document its schema in DATABASE.md.
+2. **Build the SOE dashboard (HTML)** once the owner provides the output spec. The SEIT
+   dashboard is reference only; its parser assumes the old programme/cluster schema and must be
+   rewritten for the department-based model.
+3. **Commit the template generator scripts** (`build_soe.py`, `inject_cache.py`) for
+   reproducible builds.
+4. Decide whether populated real-data workbooks live in the repo or stay off-repo (likely
+   off-repo / gitignored).
 
 ## Later / possible
 - Lightweight automated check (Node + ExcelJS) that a workbook passes `createDashboardData`,

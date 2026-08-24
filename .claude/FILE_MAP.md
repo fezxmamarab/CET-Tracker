@@ -3,8 +3,13 @@
 ## Repo root
 - `README.md` — one-line project description ("CET Tracker for SOE").
 - `CLAUDE.md` — project memory index (conventions + where knowledge lives).
-- `SEIT CET Tracking 2026 - TEMPLATE.xlsx` — the blank data workbook template. Binary; edit
+- `SEIT CET Tracking 2026 - TEMPLATE.xlsx` — the blank SEIT data workbook template. Binary; edit
   in Excel. Structure/schema documented in `.claude/DATABASE.md`.
+- `SOE CET Tracking 2026.xlsx` — the NEW SOE / ITE College West blank template (first draft,
+  under owner review). Department-based governance model, NOT the SEIT schema. Tabs: Read Me ·
+  Overall (merged participation+hours monitor) · one tab per department (LTE1, LTE2, EE, MCE,
+  ME, BE) · All Courses (register + COUNTIF counts) · Lists (dropdown source). Built by the
+  openpyxl + cached-value-injection method below.
 
 ## `.claude/`
 - `PROJECT.md`, `ARCHITECTURE.md`, `DATABASE.md`, `FEATURES.md`, `FILE_MAP.md`,

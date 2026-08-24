@@ -17,3 +17,21 @@
   header regex — both bugs found and fixed while validating the template.
 - **ApLM excluded from CET totals; MLC treated as annual-cumulative; SCTP counted at
   enrolment level.** These mirror the dashboard's business rules so the template reconciles.
+
+## SOE workbook (2026-08-24)
+- **SOE governed by DEPARTMENT, not course type.** Tabs are the 6 departments (LTE1, LTE2, EE,
+  MCE, ME, BE), each owned by one rep; course type became a dropdown column. This is the owner's
+  org model — replaces SEIT's tab-per-course-type + EC/ICT cluster column.
+- **Built the SOE workbook FRESH, not adapted from SEIT.** The tab axis flipped (department vs.
+  course-type), so a rewrite was cleaner than editing the SEIT template.
+- **One merged `Overall` tab** (participation + hours side by side) instead of SEIT's two
+  Overall tabs — owner wants to monitor from a single sheet.
+- **`All Courses` is a manual register + COUNTIF counts**, not auto-consolidated from the dept
+  tabs. Excel can't reliably gather a growing cross-sheet list without dynamic-array functions
+  (FILTER/UNIQUE), which the sandbox's LibreOffice can't evaluate — so a manual list is robust.
+- **Dropdowns sourced from a `Lists` sheet** (15 course types, 6 departments) via cross-sheet
+  list validation, so the vocabulary is edited in one place.
+- **Reused the SEIT cached-value-injection method** (`build_soe.py` + `inject_cache.py`):
+  openpyxl writes formulas, then cached values are injected into the XML because the sandbox
+  LibreOffice recalc (both the StarBasic macro and `--convert-to` paths) hangs/fails here.
+  Excel recalculates live on open.
